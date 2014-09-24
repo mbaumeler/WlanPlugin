@@ -2,23 +2,23 @@
 
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
            id="ch.mbaumeler.phonegap.plugin.wlan"
-      version="0.1.0">
-    <name>OfflinePlugin</name>
-    <description>Plugin to enable or disable the wlan status</description>
+      version="0.2.0">
+    <name>WlanPlugin</name>
+    <description>Plugin to enable or disable wlan</description>
     <license>MIT</license>
-    <keywords>phonegap,wland</keywords>
+    <keywords>phonegap,wlan</keywords>
 
 
-    <js-module src="www/wlanstate.js" name="wlanState">
-        <clobbers target="window.wlanState" />
+    <js-module src="www/wlan.js" name="wlan">
+        <clobbers target="window.wlan" />
     </js-module>
 
     <!-- android -->
     <platform name="android">
 	
         <config-file target="res/xml/config.xml" parent="/*">
-            <feature name="OfflinePlugin">
-                <param name="android-package" value="ch.mbaumeler.phonegap.plugin.wlan.OfflinePlugin"/>
+            <feature name="WlanPlugin">
+                <param name="android-package" value="ch.mbaumeler.phonegap.plugin.wlan.WlanPlugin"/>
             </feature>
         </config-file>
        
@@ -27,6 +27,6 @@
 			<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
         </config-file>
 	   
-        <source-file src="src/android/OfflinePlugin.java" target-dir="src/ch/mbaumeler/phonegap/plugin/wlan" />      
+        <source-file src="src/android/WlanPlugin.java" target-dir="src/ch/mbaumeler/phonegap/plugin/wlan" />      
      </platform>          
 </plugin>

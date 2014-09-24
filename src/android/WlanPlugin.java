@@ -9,7 +9,7 @@ import org.json.JSONArray;
 import android.content.Context;
 import android.net.wifi.WifiManager;
 
-public class OfflinePlugin extends CordovaPlugin {
+public class WlanPlugin extends CordovaPlugin {
 
 	private WifiManager wifiManager;
 
@@ -21,7 +21,10 @@ public class OfflinePlugin extends CordovaPlugin {
 
 	public boolean execute(String action, JSONArray args,
 			CallbackContext callbackContext) {
-		if (action.equals("disableWifi")) {
+		if (action.equals("enableWifi")) {
+			wifiManager.setWifiEnabled(true);
+			return true;
+		} else if (action.equals("disableWifi")) {
 			wifiManager.setWifiEnabled(false);
 			return true;
 		}
