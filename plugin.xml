@@ -24,7 +24,7 @@
        
 	   <config-file target="AndroidManifest.xml" parent="/manifest">
            <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
-			<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+	   <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
         </config-file>
 	   
         <source-file src="src/android/WlanPlugin.java" target-dir="src/ch/mbaumeler/phonegap/plugin/wlan" />      
