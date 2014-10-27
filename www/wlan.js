@@ -1,5 +1,5 @@
 var wlan = {
-    enable: function(enable, successCallback, errorCallback) {
+    enable: function(successCallback, errorCallback) {
         cordova.exec(
             successCallback, 
             errorCallback, 
@@ -8,7 +8,7 @@ var wlan = {
             []
         ); 
     },
-	disable: function(enable, successCallback, errorCallback) {
+	disable: function(successCallback, errorCallback) {
         cordova.exec(
             successCallback, 
             errorCallback, 
